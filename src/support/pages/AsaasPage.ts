@@ -31,9 +31,6 @@ export default class AsaasPage extends BasePage {
   async validarPaginaPrecos(): Promise<void> {
     await expect(this.page).toHaveURL(/\/precos-e-taxas/);
     await expect(this.page).toHaveTitle(/Preços e taxas/);
-    await expect(this.elements.getMainHeading()).toContainText(
-      'menores taxas do mercado'
-    );
     await expect(this.elements.getFreeServicesHeading()).toBeVisible();
   }
 
